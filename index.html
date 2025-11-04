@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Patrona ¡FAST FOOD! | Pedidos a Domicilio</title>
+    <link rel="shortcut icon" href="WebCraft.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+    <div class="contenedor">
+        
+        <header class="header">
+            <h1 class="logo">LA <span>PATRONA</span></h1>
+            
+            <nav class="menu">
+                <ul class="navegacion">
+                    <li><a href="#">Promociones</a></li>
+                    <li><a href="#">Contacto</a></li>
+                    <li>
+                        <a href="#">Mi Cuenta</a>
+                        <a href="#" id="cart-nav-btn">Carrito (0)</a> 
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="presentacion">
+            <div class="informacion">
+                <h2>¡LA PATRONA!</h2>
+                <h1>La Mejor Comida <span style="color: #D81B60;">Rápida</span></h1>
+                <p>Prueba nuestras deliciosas y originales hamburguesas, hot dogs y especialidades.</p>
+                <div class="informacion--boton">
+                    </div>
+            </div>
+
+            <figure class="presentacion--imagen">
+                <img src="hamburger.jpg" alt="Hamburguesa principal">
+            </figure>
+        </section>
+
+        <section id="menu-seccion" class="comida">
+            
+            <h2 class="comida--titulo">Platos Estrellas del Día</h2>
+            <div class="platos">
+                
+                <div class="plato" data-category="hamburguesas">
+                    <img src="Hamburguesa Patrona.png" alt="Hamburguesa La Patrona">
+                    <h3>La Patrona</h3>
+                    <p>La opción con el doble de sabor y queso. ¡Nuestra firma!</p>
+                    <div class="plato--info">
+                        <p>$20.000</p>
+                        <button class="add-to-cart" data-name="Hamburguesa La Patrona" data-price="20000">+</button>
+                    </div>
+                </div>
+
+                <div class="plato" data-category="hotdogs">
+                    <img src="Perro el Patrón.png" alt="Hot Dog El Patrón">
+                    <h3>El Patrón</h3>
+                    <p>El hot dog que incluye res o pollo desmechado, tocineta y salsa.</p>
+                    <div class="plato--info">
+                        <p>$20.000</p>
+                        <button class="add-to-cart" data-name="Hot Dog El Patrón" data-price="20000">+</button>
+                    </div>
+                </div>
+                
+                <div class="plato" data-category="patacones">
+                    <img src="Patacón El Patrón.png" alt="Patacón El Patrón">
+                    <h3>Patacón El Patrón</h3>
+                    <p>Carne, pollo, chicharrón, chorizo y mucho queso. ¡Grande!</p>
+                    <div class="plato--info">
+                        <p>$20.000</p>
+                        <button class="add-to-cart" data-name="Patacón El Patrón" data-price="20000">+</button>
+                    </div>
+                </div>
+                
+                <div class="plato" data-category="salchipapas">
+                    <img src="Salchipapa La Patrona.png" alt="Salchipapa La Patrona">
+                    <h3>Salchipapa La Patrona</h3>
+                    <p>Nuestra versión completa: carne, pollo, chicharrón y salsas.</p>
+                    <div class="plato--info">
+                        <p>$20.000</p>
+                        <button class="add-to-cart" data-name="Salchipapa La Patrona" data-price="20000">+</button>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <h2 class="comida--titulo" style="margin-top: 100px;">Menú Completo por Categoría</h2>
+
+            <div class="menu-accordion">
+                <div class="menu-category-columns">
+                    
+                    <div class="menu-column">
+                        <div class="category-wrapper">
+                            <h3 class="category-title" data-category-target="menu-hamburguesas">🍔 Hamburguesas</h3>
+                            <div class="menu-category-list" id="menu-hamburguesas">
+                                <div class="menu-item-wrapper">
+                                    <div class="menu-item-header" data-target="desc-hamb1">
+                                        <h4 class="item-name">Clásica</h4>
+                                        <div class="item-price-actions">
+                                            <span class="item-price">$13.000</span>
+                                            <button class="toggle-btn">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="menu-item-description" id="desc-hamb1">
+                                        <p>Pan tipo brioche o arepa o patacón, 200g carne de res artesanal, tocineta ahumada, queso chedar, lechuga, cebolla caramelizada, salsa de la casa.</p>
+                                        <button class="add-to-cart-accordion" data-name="Hamburguesa Clásica" data-price="13000">Añadir al Pedido</button>
+                                    </div>
+                                </div>
+                                <div class="menu-item-wrapper">
+                                    <div class="menu-item-header" data-target="desc-hamb2">
+                                        <h4 class="item-name">Ropa Vieja</h4>
+                                        <div class="item-price-actions">
+                                            <span class="item-price">$15.000</span>
+                                            <button class="toggle-btn">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="menu-item-description" id="desc-hamb2">
+                                        <p>Pan tipo brioche o arepa o patacón, 200g de res artesanal, cerdo o pollo desmechado, queso chedar, tocineta ahumada, lechuga, cebolla caramelizada, salsa de la casa.</p>
+                                        <button class="add-to-cart-accordion" data-name="Hamburguesa Ropa Vieja" data-price="15000">Añadir al Pedido</button>
+                                    </div>
+                                </div>
+                                <div class="menu-item-wrapper">
+                                    <div class="menu-item-header" data-target="desc-hamb3">
+                                        <h4 class="item-name">Tropical</h4>
+                                        <div class="item-price-actions">
+                                            <span class="item-price">$15.000</span>
+                                            <button class="toggle-btn">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="menu-item-description" id="desc-hamb3">
+                                        <p>Pan tipo brioche o arepa, 200g carne de res, tocineta ahumada, rodaja de piña caramelizada, queso asado, lechuga, cebolla caramelizada, salsa de la casa.</p>
+                                        <button class="add-to-cart-accordion" data-name="Hamburguesa Tropical" data-price="15000">Añadir al Pedido</button>
+                                    </div>
+                                </div>
+                                <div class="menu-item-wrapper">
+                                    <div class="menu-item-header" data-target="desc-hamb4">
+                                        <h4 class="item-name">La Patrona</h4>
+                                        <div class="item-price-actions">
+                                            <span class="item-price">$20.000</span>
+                                            <button class="toggle-btn">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="menu-item-description" id="desc-hamb4">
+                                        <p>Pan tipo brioche o arepa, 200g carne de res, 150g de res, cerdo o pollo desmechado, queso asado y chedar, tocineta ahumada, lechuga, cebolla caramelizada y salsa de la casa.</p>
+                                        <button class="add-to-cart-accordion" data-name="Hamburguesa La Patrona (Completa)" data-price="20000">Añadir al Pedido</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="category-wrapper">
+                            <h3 class="category-title" data-category-target="menu-hotdogs">🌭 Hot Dogs</h3>
+                            <div class="menu-category-list" id="menu-hotdogs">
+                                <div class="menu-item-wrapper">
+                                    <div class="menu-item-header" data-target="desc-dog1">
+                                        <h4 class="item-name">Clásico</h4>
+                                        <div class="item-price-actions">
+                                            <span class="item-price">$13.000</span>
+                                            <button class="toggle-btn">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="menu-item-description" id="desc-dog1">
+                                        <p>Pan con ajonjolí, salchicha americana, tocineta ahumada, queso mozzarella, cebolla caramelizada, salsa de la casa.</p>
+                                        <button class="add-to-cart-accordion" data-name="Hot Dog Clásico" data-price="13000">Añadir al Pedido</button>
+                                    </div>
+                                </div>
+                                <div class="menu-item-wrapper">
+                                    <div class="menu-item-header" data-target="desc-dog2">
+                                        <h4 class="item-name">Ropa Vieja</h4>
+                                        <div class="item-price-actions">
+                                            <span class="item-price">$15.000</span>
+                                            <button class="toggle-btn">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="menu-item-description" id="desc-dog2">
+                                        <p>Pan con ajonjolí, 150g de res o pollo desmechado, queso mozzarella, tocineta ahumada, cebolla caramelizada, salsa de la casa.</p>
+                                        <button class="add-to-cart-accordion" data-name="Hot Dog Ropa Vieja" data-price="15000">Añadir al Pedido</button>
+                                    </div>
+                                </div>
+                                <div class="menu-item-wrapper">
+                                    <div class="menu-item-header" data-target="desc-dog3">
+                                        <h4 class="item-name">Ranchero</h4>
+                                        <div class="item-price-actions">
+                                            <span class="item-price">$15.000</span>
+                                            <button class="toggle-btn">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="menu-item-description" id="desc-dog3">
+                                        <p>Pan con ajonjolí, salchicha americana, tocineta ahumada, hogao con maíz tierno, cebolla caramelizada, salsa de la casa.</p>
+                                        <button class="add-to-cart-accordion" data-name="Hot Dog Ranchero" data-price="15000">Añadir al Pedido</button>
+                                    </div>
+                                </div>
+                                <div class="menu-item-wrapper">
+                                    <div class="menu-item-header" data-target="desc-dog4">
+                                        <h4 class="item-name">El Patrón</h4>
+                                        <div class="item-price-actions">
+                                            <span class="item-price">$20.000</span>
+                                            <button class="toggle-btn">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="menu-item-description" id="desc-dog4">
+                                        <p>Pan con ajonjolí, salchicha americana, 150g de res o pollo desmechado, tocineta ahumada, hogao con maíz tierno, cebolla caramelizada y salsa de la casa.</p>
+                                        <button class="add-to-cart-accordion" data-name="Hot Dog El Patrón" data-price="20000">Añadir al Pedido</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="category-wrapper">
+                            <h3 class="category-title" data-category-target="menu-patacones">🍌 Patacones</h3>
+                            <div class="menu-category-list" id="menu-patacones">
+                                <div class="menu-item-wrapper">
+                                    <div class="menu-item-header" data-target="desc-pat1">
+                                        <h4 class="item-name">Clásico</h4>
+                                        <div class="item-price-actions">
+                                            <span class="item-price">$13.000</span>
+                                            <button class="toggle-btn">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="menu-item-description" id="desc-pat1">
+                                        <p>Plátano verde, chorizo, hogao con maiz tierno, queso mozzarella, salsa de la casa.</p>
+                                        <button class="add-to-cart-accordion" data-name="Patacón Clásico" data-price="13000">Añadir al Pedido</button>
+                                    </div>
+                                </div>
+                                <div class="menu-item-wrapper">
+                                    <div class="menu-item-header" data-target="desc-pat2">
+                                        <h4 class="item-name">Ropa Vieja</h4>
+                                        <div class="item-price-actions">
+                                            <span class="item-price">$15.000</span>
+                                            <button class="toggle-btn">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="menu-item-description" id="desc-pat2">
+                                        <p>Plátano verde, 150g de res o pollo desmechado, chorizo, hogao con maíz tierno, salsa de la casa.</p>
+                                        <button class="add-to-cart-accordion" data-name="Patacón Ropa Vieja" data-price="15000">Añadir al Pedido</button>
+                                    </div>
+                                </div>
+                                <div class="menu-item-wrapper">
+                                    <div class="menu-item-header" data-target="desc-pat3">
+                                        <h4 class="item-name">Chanchito</h4>
+                                        <div class="item-price-actions">
+                                            <span class="item-price">$15.000</span>
+                                            <button class="toggle-btn">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="menu-item-description" id="desc-pat3">
+                                        <p>Plátano verde, 150g de trocitos de chicharrón, chorizo, hogao con maíz tierno, salsa de la casa.</p>
+                                        <button class="add-to-cart-accordion" data-name="Patacón Chanchito" data-price="15000">Añadir al Pedido</button>
+                                    </div>
+                                </div>
+                                <div class="menu-item-wrapper">
+                                    <div class="menu-item-header" data-target="desc-pat4">
+                                        <h4 class="item-name">El Patrón</h4>
+                                        <div class="item-price-actions">
+                                            <span class="item-price">$20.000</span>
+                                            <button class="toggle-btn">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="menu-item-description" id="desc-pat4">
+                                        <p>Plátano verde, 150g de res o pollo desmechado, 150g de trocitos de chicharrón, chorizo, hogao con maíz tierno, salsa de la casa.</p>
+                                        <button class="add-to-cart-accordion" data-name="Patacón El Patrón (Completo)" data-price="20000">Añadir al Pedido</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="category-wrapper">
+                            <h3 class="category-title" data-category-target="menu-elotes">🌽 Elotes</h3>
+                            <div class="menu-category-list" id="menu-elotes">
+                                <div class="menu-item-wrapper">
+                                    <div class="menu-item-header" data-target="desc-elo1">
+                                        <h4 class="item-name">Clásico</h4>
+                                        <div class="item-price-actions">
+                                            <span class="item-price">$10.000</span>
+                                            <button class="toggle-btn">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="menu-item-description" id="desc-elo1">
+                                        <p>Mazorca sabanera, mantequilla, queso costeño, miel, tajín.</p>
+                                        <button class="add-to-cart-accordion" data-name="Elote Clásico" data-price="10000">Añadir al Pedido</button>
+                                    </div>
+                                </div>
+                                <div class="menu-item-wrapper">
+                                    <div class="menu-item-header" data-target="desc-elo2">
+                                        <h4 class="item-name">Cronchi</h4>
+                                        <div class="item-price-actions">
+                                            <span class="item-price">$13.000</span>
+                                            <button class="toggle-btn">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="menu-item-description" id="desc-elo2">
+                                        <p>Mazorca sabanera, mantequilla, doritos o takis triturados, queso costeño, miel, tajín.</p>
+                                        <button class="add-to-cart-accordion" data-name="Elote Cronchi" data-price="13000">Añadir al Pedido</button>
+                                    </div>
+                                </div>
+                                <div class="menu-item-wrapper">
+                                    <div class="menu-item-header" data-target="desc-elo3">
+                                        <h4 class="item-name">Ropa Vieja</h4>
+                                        <div class="item-price-actions">
+                                            <span class="item-price">$15.000</span>
+                                            <button class="toggle-btn">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="menu-item-description" id="desc-elo3">
+                                        <p>Mazorca sabanera en cama de res o pollo desmechado (150g), mantequilla, queso costeño, miel, tajín.</p>
+                                        <button class="add-to-cart-accordion" data-name="Elote Ropa Vieja" data-price="15000">Añadir al Pedido</button>
+                                    </div>
+                                </div>
+                                <div class="menu-item-wrapper">
+                                    <div class="menu-item-header" data-target="desc-elo4">
+                                        <h4 class="item-name">Chanchito</h4>
+                                        <div class="item-price-actions">
+                                            <span class="item-price">$15.000</span>
+                                            <button class="toggle-btn">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="menu-item-description" id="desc-elo4">
+                                        <p>Mazorca sabanera, mantequilla, 150g trocitos de chicharrón, queso costeño, miel, tajín.</p>
+                                        <button class="add-to-cart-accordion" data-name="Elote Chanchito" data-price="15000">Añadir al Pedido</button>
+                                    </div>
+                                </div>
+                                <div class="menu-item-wrapper">
+                                    <div class="menu-item-header" data-target="desc-elo5">
+                                        <h4 class="item-name">El Patrón</h4>
+                                        <div class="item-price-actions">
+                                            <span class="item-price">$20.000</span>
+                                            <button class="toggle-btn">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="menu-item-description" id="desc-elo5">
+                                        <p>Mazorca sabanera en cama de res o pollo desmechado (150g), doritos o takis triturados, mantequilla, queso costeño, miel, tajín.</p>
+                                        <button class="add-to-cart-accordion" data-name="Elote El Patrón (Completo)" data-price="20000">Añadir al Pedido</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                    <div class="menu-column">
+                        <div class="category-wrapper">
+                            <h3 class="category-title" data-category-target="menu-salchipapas">🍟 Salchiapas</h3>
+                            <div class="menu-category-list" id="menu-salchipapas">
+                                <div class="menu-item-wrapper">
+                                    <div class="menu-item-header" data-target="desc-sal1">
+                                        <h4 class="item-name">Clásica</h4>
+                                        <div class="item-price-actions">
+                                            <span class="item-price">$12.000</span>
+                                            <button class="toggle-btn">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="menu-item-description" id="desc-sal1">
+                                        <p>Papa francesa o criollitas, salchicha americana, queso mozzarella, queso campesino, salsa de la casa.</p>
+                                        <button class="add-to-cart-accordion" data-name="Salchipapa Clásica" data-price="12000">Añadir al Pedido</button>
+                                    </div>
+                                </div>
+                                <div class="menu-item-wrapper">
+                                    <div class="menu-item-header" data-target="desc-sal2">
+                                        <h4 class="item-name">Ropa Vieja</h4>
+                                        <div class="item-price-actions">
+                                            <span class="item-price">$15.000</span>
+                                            <button class="toggle-btn">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="menu-item-description" id="desc-sal2">
+                                        <p>Papa francesa o criollitas, salchicha americana, queso mozzarella, queso campesino, 150g de res o pollo desmechado, salsa de la casa.</p>
+                                        <button class="add-to-cart-accordion" data-name="Salchipapa Ropa Vieja" data-price="15000">Añadir al Pedido</button>
+                                    </div>
+                                </div>
+                                <div class="menu-item-wrapper">
+                                    <div class="menu-item-header" data-target="desc-sal3">
+                                        <h4 class="item-name">Chanchita</h4>
+                                        <div class="item-price-actions">
+                                            <span class="item-price">$15.000</span>
+                                            <button class="toggle-btn">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="menu-item-description" id="desc-sal3">
+                                        <p>Papa francesa o criollitas, salchicha americana, queso mozzarella, queso campesino, 150g trocitos de chicharrón salsa de la casa.</p>
+                                        <button class="add-to-cart-accordion" data-name="Salchipapa Chanchita" data-price="15000">Añadir al Pedido</button>
+                                    </div>
+                                </div>
+                                <div class="menu-item-wrapper">
+                                    <div class="menu-item-header" data-target="desc-sal4">
+                                        <h4 class="item-name">La Patrona</h4>
+                                        <div class="item-price-actions">
+                                            <span class="item-price">$20.000</span>
+                                            <button class="toggle-btn">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="menu-item-description" id="desc-sal4">
+                                        <p>Papa a la francesa o criollitas, salchicha americana, queso mozzarella, queso campesino, 150g de res o pollo desmechado, 150g de trocitos de chicharrón, salsa de la casa.</p>
+                                        <button class="add-to-cart-accordion" data-name="Salchipapa La Patrona (Completa)" data-price="20000">Añadir al Pedido</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="category-wrapper">
+                            <h3 class="category-title" data-category-target="menu-infantil">🧸 Infantil</h3>
+                            <div class="menu-category-list" id="menu-infantil">
+                                <div class="menu-item-wrapper">
+                                    <div class="menu-item-header" data-target="desc-inf1">
+                                        <h4 class="item-name">Nuggets</h4>
+                                        <div class="item-price-actions">
+                                            <span class="item-price">$15.000</span>
+                                            <button class="toggle-btn">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="menu-item-description" id="desc-inf1">
+                                        <p>Nuggets de pollo con papa francesa, juguito mini y juguete sorpresa.</p>
+                                        <button class="add-to-cart-accordion" data-name="Nuggets Infantil" data-price="15000">Añadir al Pedido</button>
+                                    </div>
+                                </div>
+                                <div class="menu-item-wrapper">
+                                    <div class="menu-item-header" data-target="desc-inf2">
+                                        <h4 class="item-name">Patroncita</h4>
+                                        <div class="item-price-actions">
+                                            <span class="item-price">$15.000</span>
+                                            <button class="toggle-btn">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="menu-item-description" id="desc-inf2">
+                                        <p>Mini hamburguesa, papa francesa, juguito mini y juguete sorpresa.</p>
+                                        <button class="add-to-cart-accordion" data-name="Patroncita Infantil" data-price="15000">Añadir al Pedido</button>
+                                    </div>
+                                </div>
+                                <div class="menu-item-wrapper">
+                                    <div class="menu-item-header" data-target="desc-inf3">
+                                        <h4 class="item-name">Patroncito</h4>
+                                        <div class="item-price-actions">
+                                            <span class="item-price">$15.000</span>
+                                            <button class="toggle-btn">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="menu-item-description" id="desc-inf3">
+                                        <p>Mini Hot Dog, papa francesa, juguito mini y juguete sorpresa.</p>
+                                        <button class="add-to-cart-accordion" data-name="Patroncito Infantil" data-price="15000">Añadir al Pedido</button>
+                                    </div>
+                                </div>
+                                <div class="menu-item-wrapper">
+                                    <div class="menu-item-header" data-target="desc-inf4">
+                                        <h4 class="item-name">Elotito</h4>
+                                        <div class="item-price-actions">
+                                            <span class="item-price">$15.000</span>
+                                            <button class="toggle-btn">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="menu-item-description" id="desc-inf4">
+                                        <p>Mazorca sabanera cronchi, papa francesa, juguito mini y juguete sorpresa.</p>
+                                        <button class="add-to-cart-accordion" data-name="Elotito Infantil" data-price="15000">Añadir al Pedido</button>
+                                    </div>
+                                </div>
+                                <div class="menu-item-wrapper">
+                                    <div class="menu-item-header" data-target="desc-inf5">
+                                        <h4 class="item-name">Salchipapa</h4>
+                                        <div class="item-price-actions">
+                                            <span class="item-price">$15.000</span>
+                                            <button class="toggle-btn">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="menu-item-description" id="desc-inf5">
+                                        <p>Salchipapa clásica, juguito mini y juguete sorpresa.</p>
+                                        <button class="add-to-cart-accordion" data-name="Salchipapa Infantil" data-price="15000">Añadir al Pedido</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="category-wrapper">
+                            <h3 class="category-title" data-category-target="menu-bebidas">🥤 Bebidas</h3>
+                            <div class="menu-category-list" id="menu-bebidas">
+                                <h4 style="color:#D81B60; margin: 15px 0 5px 0;">Gaseosas / Agua / Té</h4>
+                                <div class="menu-item-wrapper">
+                                    <div class="menu-item-header" data-target="desc-beb1">
+                                        <h4 class="item-name">Coca-cola 350ml</h4>
+                                        <div class="item-price-actions">
+                                            <span class="item-price">$3.000</span>
+                                            <button class="toggle-btn">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="menu-item-description" id="desc-beb1">
+                                        <p>Gaseosa Coca-cola en presentación de 350ml.</p>
+                                        <button class="add-to-cart-accordion" data-name="Coca-cola 350ml" data-price="3000">Añadir al Pedido</button>
+                                    </div>
+                                </div>
+                                <div class="menu-item-wrapper">
+                                    <div class="menu-item-header" data-target="desc-beb2">
+                                        <h4 class="item-name">Cuatro 350ml</h4>
+                                        <div class="item-price-actions">
+                                            <span class="item-price">$3.000</span>
+                                            <button class="toggle-btn">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="menu-item-description" id="desc-beb2">
+                                        <p>Gaseosa Cuatro en presentación de 350ml.</p>
+                                        <button class="add-to-cart-accordion" data-name="Cuatro 350ml" data-price="3000">Añadir al Pedido</button>
+                                    </div>
+                                </div>
+                                <div class="menu-item-wrapper">
+                                    <div class="menu-item-header" data-target="desc-beb3">
+                                        <h4 class="item-name">Sprite 350ml</h4>
+                                        <div class="item-price-actions">
+                                            <span class="item-price">$3.000</span>
+                                            <button class="toggle-btn">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="menu-item-description" id="desc-beb3">
+                                        <p>Gaseosa Sprite en presentación de 350ml.</p>
+                                        <button class="add-to-cart-accordion" data-name="Sprite 350ml" data-price="3000">Añadir al Pedido</button>
+                                    </div>
+                                </div>
+                                <div class="menu-item-wrapper">
+                                    <div class="menu-item-header" data-target="desc-beb4">
+                                        <h4 class="item-name">Té</h4>
+                                        <div class="item-price-actions">
+                                            <span class="item-price">$3.500</span>
+                                            <button class="toggle-btn">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="menu-item-description" id="desc-beb4">
+                                        <p>Té frío o caliente.</p>
+                                        <button class="add-to-cart-accordion" data-name="Té" data-price="3500">Añadir al Pedido</button>
+                                    </div>
+                                </div>
+                                <div class="menu-item-wrapper">
+                                    <div class="menu-item-header" data-target="desc-beb5">
+                                        <h4 class="item-name">Botella de agua</h4>
+                                        <div class="item-price-actions">
+                                            <span class="item-price">$2.500</span>
+                                            <button class="toggle-btn">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="menu-item-description" id="desc-beb5">
+                                        <p>Botella de agua personal.</p>
+                                        <button class="add-to-cart-accordion" data-name="Botella de agua" data-price="2500">Añadir al Pedido</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="category-wrapper">
+                            <h3 class="category-title" data-category-target="menu-cervezas">🍻 Cervezas</h3>
+                            <div class="menu-category-list" id="menu-cervezas">
+                                <h4 style="color:#D81B60; margin: 15px 0 5px 0;">Opciones disponibles</h4>
+                                <div class="menu-item-wrapper">
+                                    <div class="menu-item-header" data-target="desc-cerveza1">
+                                        <h4 class="item-name">Club Colombia Lata</h4>
+                                        <div class="item-price-actions">
+                                            <span class="item-price">$4.000</span>
+                                            <button class="toggle-btn">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="menu-item-description" id="desc-cerveza1">
+                                        <p>Cerveza Club Colombia en lata.</p>
+                                        <button class="add-to-cart-accordion" data-name="Club Colombia Lata" data-price="4000">Añadir al Pedido</button>
+                                    </div>
+                                </div>
+                                <div class="menu-item-wrapper">
+                                    <div class="menu-item-header" data-target="desc-cerveza2">
+                                        <h4 class="item-name">Coronita</h4>
+                                        <div class="item-price-actions">
+                                            <span class="item-price">$4.000</span>
+                                            <button class="toggle-btn">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="menu-item-description" id="desc-cerveza2">
+                                        <p>Cerveza Coronita. Opción michelada $2.000 adicionales.</p>
+                                        <button class="add-to-cart-accordion" data-name="Coronita" data-price="4000">Añadir al Pedido</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-single-centered">
+                    <div class="category-wrapper">
+                        <h3 class="category-title" data-category-target="menu-cocteles-refrescantes">🍹 Cocteles Refrescantes</h3>
+                        <div class="menu-category-list" id="menu-cocteles-refrescantes">
+                            <div class="menu-item-wrapper">
+                                <div class="menu-item-header" data-target="desc-cocr1">
+                                    <h4 class="item-name">Crush</h4>
+                                    <div class="item-price-actions">
+                                        <span class="item-price">$10.000</span>
+                                        <button class="toggle-btn">+</button>
+                                    </div>
+                                </div>
+                                <div class="menu-item-description" id="desc-cocr1">
+                                    <p>Vodka, Kola, Champagne.</p>
+                                    <button class="add-to-cart-accordion" data-name="Crush" data-price="10000">Añadir al Pedido</button>
+                                </div>
+                            </div>
+                            <div class="menu-item-wrapper">
+                                <div class="menu-item-header" data-target="desc-cocr2">
+                                    <h4 class="item-name">Engallao</h4>
+                                    <div class="item-price-actions">
+                                        <span class="item-price">$10.000</span>
+                                        <button class="toggle-btn">+</button>
+                                    </div>
+                                </div>
+                                <div class="menu-item-description" id="desc-cocr2">
+                                    <p>Whisky, Bon Bon Bum.</p>
+                                    <button class="add-to-cart-accordion" data-name="Engallao" data-price="10000">Añadir al Pedido</button>
+                                </div>
+                            </div>
+                            <div class="menu-item-wrapper">
+                                <div class="menu-item-header" data-target="desc-cocr3">
+                                    <h4 class="item-name">Margarimex</h4>
+                                    <div class="item-price-actions">
+                                        <span class="item-price">$10.000</span>
+                                        <button class="toggle-btn">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="menu-item-description" id="desc-cocr3">
+                                        <p>Tequila, Triple sec, Limón.</p>
+                                        <button class="add-to-cart-accordion" data-name="Margarimex" data-price="10000">Añadir al Pedido</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+        </section>
+
+        <button id="fixed-cart-button" class="fixed-cart-button">
+            Ver Carrito <span id="cart-item-count">(0)</span>
+        </button>
+
+        <div id="cart-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h3>Tu Pedido</h3>
+                <div id="cart-items">
+                    <p>Tu carrito está vacío.</p>
+                </div>
+                <div class="cart-summary">
+                    <p>Total: <span id="cart-total">$0</span></p>
+                </div>
+                <button id="checkout-button">Proceder al Pago</button>
+            </div>
+        </div>
+
+        <div id="payment-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button close-payment-modal">&times;</span>
+                <h3>Opciones de Pago</h3>
+                <p>Total a Pagar: <span id="payment-total-display">$0</span></p>
+
+                <h4>Método de Pago</h4>
+                <div class="payment-methods">
+                    <button class="payment-method-btn" data-method="efectivo">Efectivo</button>
+                    <button class="payment-method-btn" data-method="tarjeta">Tarjeta (Simulado)</button>
+                </div>
+
+                <div id="cash-payment-details" class="payment-details-form" style="display: none;">
+                    <h4>Pago en Efectivo</h4>
+                    <form id="cash-form">
+                        <label for="cash-name">Nombre y Apellido:</label>
+                        <input type="text" id="cash-name" required>
+                        <label for="cash-address">Dirección de Entrega:</label>
+                        <input type="text" id="cash-address" required>
+                        <label for="cash-change">¿Con cuánto paga? (Para el cambio):</label>
+                        <input type="number" id="cash-change" placeholder="Ej: 50000" min="0">
+                        <button type="submit">Finalizar Pedido (Efectivo)</button>
+                    </form>
+                </div>
+
+                <div id="card-payment-details" class="payment-details-form" style="display: none;">
+                    <h4>Pago con Tarjeta (Simulado)</h4>
+                    <form id="card-form">
+                        <label for="card-name">Nombre en la Tarjeta:</label>
+                        <input type="text" id="card-name" required>
+                        <label for="card-address">Dirección de Entrega:</label>
+                        <input type="text" id="card-address" required>
+                        <label for="card-number">Número de la tarjeta (Simulado):</label>
+                        <input type="text" id="card-number" placeholder="4242 xxxx xxxx 4242" required>
+                        <label for="expiry">Fecha de expiración (MM/AA):</label>
+                        <input type="text" id="expiry" placeholder="12/26" required>
+                        <label for="cvv">CVV:</label>
+                        <input type="text" id="cvv" placeholder="123" required>
+                        <button type="submit">
+                            Finalizar y Pagar (Simulado)
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <footer class="watermark">
+        <div class="watermark--logo"><img src="WebCraft.png" alt="Page powered by WebCraft"></div>
+        <p>Page powered by WebCraft</p>
+    </footer>
+    <script>
+        let cart = [];
+        let total = 0;
+
+        // carrito
+        function updateCartDisplay() {
+            const cartItemsContainer = document.getElementById('cart-items');
+            const cartTotalSpan = document.getElementById('cart-total');
+            const cartNavCount = document.getElementById('cart-nav-btn');
+            const cartFixedCount = document.getElementById('fixed-cart-button').querySelector('#cart-item-count'); 
+            
+            cartItemsContainer.innerHTML = '';
+            total = 0;
+
+            if (cart.length === 0) {
+                cartItemsContainer.innerHTML = '<p>Tu carrito está vacío.</p>';
+            } else {
+                cart.forEach((item, index) => {
+                    const itemElement = document.createElement('div');
+                    itemElement.className = 'cart-item';
+                    itemElement.innerHTML = `
+                        <span>${item.name} (${item.quantity})</span>
+                        <span>$${(item.price * item.quantity).toLocaleString('es-CO')}</span>
+                        <button onclick="removeFromCart(${index})" style="width: auto; background-color: #f44336; padding: 5px 10px;">-</button>
+                    `;
+                    cartItemsContainer.appendChild(itemElement);
+                    total += item.price * item.quantity;
+                });
+            }
+
+            cartTotalSpan.textContent = `$${total.toLocaleString('es-CO')}`;
+            const itemCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+            cartNavCount.textContent = `Carrito (${itemCount})`;
+            cartFixedCount.textContent = `(${itemCount})`;
+
+            if (itemCount > 0) {
+                document.getElementById('fixed-cart-button').classList.add('pulse');
+                setTimeout(() => {
+                    document.getElementById('fixed-cart-button').classList.remove('pulse');
+                }, 500);
+            }
+        }
+
+        function addToCart(name, price) {
+            const existingItem = cart.find(item => item.name === name);
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({ name, price, quantity: 1 });
+            }
+            updateCartDisplay();
+        }
+
+        function removeFromCart(index) {
+            cart[index].quantity -= 1;
+            if (cart[index].quantity === 0) {
+                cart.splice(index, 1);
+            }
+            updateCartDisplay();
+        }
+        
+        // Acordeón de Categoría (Nivel 1)
+        document.querySelectorAll('.category-title').forEach(title => {
+            title.addEventListener('click', () => {
+                const targetId = title.dataset.categoryTarget;
+                const content = document.getElementById(targetId);
+                
+                // Toggle de la clase 'active' para desplegar/contraer
+                content.classList.toggle('active');
+            });
+        });
+
+        // Acordeón de Ítem de Menú (Nivel 2)
+        document.querySelectorAll('.menu-item-header').forEach(header => {
+            header.addEventListener('click', (e) => {
+                // Evita que el clic en el botón '+' cierre el acordeón de la descripción
+                if (e.target.classList.contains('toggle-btn') || e.target.classList.contains('add-to-cart-accordion')) {
+                    return; 
+                }
+
+                const targetId = header.dataset.target;
+                const content = document.getElementById(targetId);
+                const toggleButton = header.querySelector('.toggle-btn');
+
+                // Toggle de la clase 'active'
+                content.classList.toggle('active');
+                toggleButton.classList.toggle('active');
+                
+                // Actualiza el texto del botón de toggle:
+                if (toggleButton.textContent === '+') {
+                    toggleButton.textContent = 'x';
+                } else {
+                    toggleButton.textContent = '+';
+                }
+            });
+        });
+
+
+        // --- Lógica de Modales ---
+        
+        const cartModal = document.getElementById('cart-modal');
+        const paymentModal = document.getElementById('payment-modal');
+        const cartNavBtn = document.getElementById('cart-nav-btn');
+        const fixedCartBtn = document.getElementById('fixed-cart-button');
+        const checkoutBtn = document.getElementById('checkout-button');
+        const closeButtons = document.querySelectorAll('.close-button');
+        const paymentMethodBtns = document.querySelectorAll('.payment-method-btn');
+        const cashDetails = document.getElementById('cash-payment-details');
+        const cardDetails = document.getElementById('card-payment-details');
+        const cashForm = document.getElementById('cash-form');
+        const cardForm = document.getElementById('card-form');
+        const paymentTotalDisplay = document.getElementById('payment-total-display');
+
+        // Abrir Carrito
+        [cartNavBtn, fixedCartBtn].forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                cartModal.style.display = 'block';
+                updateCartDisplay();
+            });
+        });
+
+        // Cerrar Modales
+        closeButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                cartModal.style.display = 'none';
+                paymentModal.style.display = 'none';
+            });
+        });
+
+        window.onclick = function(event) {
+            if (event.target == cartModal) {
+                cartModal.style.display = 'none';
+            }
+            if (event.target == paymentModal) {
+                paymentModal.style.display = 'none';
+            }
+        }
+        
+        // Proceder al Pago (abre modal de pago)
+        checkoutBtn.addEventListener('click', () => {
+            if (cart.length === 0) {
+                alert('Tu carrito está vacío.');
+                return;
+            }
+            cartModal.style.display = 'none';
+            paymentTotalDisplay.textContent = `$${total.toLocaleString('es-CO')}`;
+            paymentModal.style.display = 'block';
+        });
+
+        // Selección de Método de Pago
+        paymentMethodBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                paymentMethodBtns.forEach(b => {
+                    b.classList.remove('selected');
+                });
+                btn.classList.add('selected');
+
+                cashDetails.style.display = 'none';
+                cardDetails.style.display = 'none';
+
+                if (btn.dataset.method === 'efectivo') {
+                    cashDetails.style.display = 'block';
+                } else if (btn.dataset.method === 'tarjeta') {
+                    cardDetails.style.display = 'block';
+                }
+            });
+        });
+
+        // --- Envío de Formularios (Simulado) ---
+
+        cashForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const changeInput = document.getElementById('cash-change').value;
+            const changeAmount = changeInput ? parseInt(changeInput) : total;
+            
+            if (changeAmount < total) {
+                alert('El monto a pagar debe ser igual o superior al total.');
+                return;
+            }
+
+            const changeMessage = (changeAmount > total) ? `Tu cambio es de $${(changeAmount - total).toLocaleString('es-CO')}.` : 'Pagas con el monto exacto.';
+
+            alert(`Pedido finalizado (Simulado).\nTotal: $${total.toLocaleString('es-CO')}\n${changeMessage}\n¡Gracias por tu compra!`);
+            cart = [];
+            updateCartDisplay();
+            paymentModal.style.display = 'none';
+            cashForm.reset();
+        });
+
+        cardForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const address = document.getElementById('card-address').value;
+            alert(`Pago con tarjeta simulado exitoso.\nTotal: $${total.toLocaleString('es-CO')}\nDirección de Entrega: ${address}\n¡Gracias por tu compra!`);
+            cart = [];
+            updateCartDisplay();
+            paymentModal.style.display = 'none';
+            cardForm.reset();
+        });
+
+        // --- Listeners para añadir al carrito ---
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', () => {
+                const name = button.dataset.name;
+                const price = parseInt(button.dataset.price);
+                addToCart(name, price);
+            });
+        });
+
+        document.querySelectorAll('.add-to-cart-accordion').forEach(button => {
+            button.addEventListener('click', () => {
+                const name = button.dataset.name;
+                const price = parseInt(button.dataset.price);
+                addToCart(name, price);
+            });
+        });
+        
+        // Inicializar
+        updateCartDisplay();
+    </script>
+</body>
+</html>

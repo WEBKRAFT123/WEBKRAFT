@@ -1,0 +1,633 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box; 
+}
+img{
+    width: 100%;
+    object-fit: cover;
+}
+
+/* ------------------------------------------- */
+/* --- ESTILOS GENERALES Y LAYOUT BASE --- */
+/* ------------------------------------------- */
+
+body {
+    background-color: rgb(255, 255, 255); 
+    color: #333; 
+}
+
+/* Contenedor */
+.contenedor{
+    background-color: #F9F9F9; 
+    padding-bottom: 40px;
+}
+/* Header -Menu */
+.header{
+    padding-top: 10px;
+    width: 90%;
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* Logo */
+.logo{
+    font-weight: 900;
+    font-size: 20px;
+    pointer-events: none; 
+}
+.logo span{
+    color: #D81B60; /* Color Principal: Rosa Fuerte */
+}
+.hamburguesa{
+    width: 30px;
+}
+@media (min-width:768px) {
+    .hamburguesa{
+        display: none;
+    }
+}
+/* Navegacion */
+.menu{
+    display: none;
+}
+@media (min-width:768px) {
+    .menu{
+        display: flex;
+    }
+}
+.navegacion{
+    display: flex;
+    align-items: center;
+    padding-left: 0;
+    list-style: none;
+    gap: 30px;
+}
+.navegacion a{
+    text-decoration: none;
+    color: #555; 
+    font-weight: 400;
+    font-size: 15px;
+    padding: 5px 0; 
+    transition: color 0.2s, border-bottom 0.2s;
+}
+.navegacion a:hover{
+    color: black;
+    border-bottom: 2px solid #D81B60;
+}
+
+/* Estilo específico para el botón "Carrito" en la navegación */
+.navegacion li:last-child{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.navegacion li:last-child a:last-child{
+    background-color: #D81B60; 
+    color: white;
+    padding: 8px 15px; 
+    border-radius: 10px;
+    border: 1px solid #D81B60;
+    font-weight: 700;
+}
+.navegacion li:last-child a:last-child:hover{
+    background-color: white;
+    color: #D81B60; 
+}
+
+/* Banner */
+.presentacion{
+    width: 90%;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 50px; 
+}
+@media (min-width:768px) {
+    .presentacion{
+        flex-direction: row;
+    }
+}
+.informacion{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+@media (min-width:768px) {
+    .informacion{
+        text-align: start;
+        align-items: flex-start;
+    }
+}
+.informacion h2 {
+    color: #D81B60;
+    font-size: 1.2rem;
+}
+.informacion h1 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #333; 
+}
+.informacion p {
+    color: #666; 
+}
+.informacion--boton button{
+    padding: 10px 20px;
+    background-color: #D81B60; 
+    border: 1px solid #D81B60;
+    color: white;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 15px;
+    transition: all 0.2s;
+}
+.informacion--boton button:hover{
+    background-color: white;
+    color: #D81B60; 
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(216, 27, 96, 0.3);
+}
+.presentacion--imagen{
+    max-width: 300px;
+    filter: drop-shadow(0 1mm 3mm rgba(216, 27, 96, 0.468)); 
+}
+@media (min-width:768px) {
+    .presentacion--imagen{
+        max-width: 500px;
+    }
+}
+/* Seccion platos */
+.comida{
+    width: 90%;
+    margin-inline:auto;
+}
+.comida--titulo{
+    text-align: center !important; /* FORZAR CENTRADO EN TODAS LAS PANTALLAS */
+    margin-top: 20px;
+    margin-bottom: 85px;
+    color: #D81B60; 
+    font-size: 2rem;
+    font-weight: 900;
+}
+@media (min-width:768px) {
+    .comida--titulo{
+        text-align: center !important; 
+    }
+}
+
+/* --- ESTILOS PARA 1. PLATOS DESTACADOS (Cuadrícula) --- */
+
+.platos{
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 85px;
+    column-gap: 20px;
+}
+@media (min-width:768px) {
+    .platos{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (min-width:992px) {
+    .platos{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+.plato{
+    width: 95%; 
+    margin-inline:auto;
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+    border: none;
+    position: relative; 
+}
+.plato img{
+    width: 150px;
+    filter: drop-shadow(0 0 0.9rem rgba(216, 27, 96, 0.5)); 
+    margin-top: -85px;
+    margin-bottom: 10px; 
+}
+.plato h3 {
+    font-size: 1.3rem;
+    color: #333; 
+}
+.plato p {
+    font-size: 0.9rem;
+    color: #666;
+}
+.plato--info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 10px;
+}
+.plato--info p{
+    font-weight: 700;
+    color: #4CAF50; 
+    font-size: 1.2rem;
+}
+.plato--info button{
+    background-color: #4CAF50; 
+    color: white;
+    font-weight: 900;
+    padding: 5px 12px;
+    border-radius: 50%;
+    font-size: 25px;
+    line-height: 1;
+}
+.plato--info button:hover{
+    cursor: pointer;
+    background-color: #D81B60; 
+}
+
+/* ---------------------------------------------------- */
+/* --- ESTILOS PARA 2. MENÚ COMPLETO (Acordeón 4-4-1) --- */
+/* ---------------------------------------------------- */
+
+.menu-accordion {
+    max-width: 1200px; 
+    margin: 0 auto 50px auto;
+}
+
+/* CONTENEDOR DE LAS DOS COLUMNAS DE 4 */
+.menu-category-columns {
+    display: grid;
+    grid-template-columns: 1fr; /* Una columna por defecto en móvil */
+    gap: 20px;
+    align-items: stretch; 
+}
+
+@media (min-width: 768px) {
+    .menu-category-columns {
+        grid-template-columns: 1fr 1fr; /* Dos columnas en desktop/tablet */
+    }
+}
+
+/* REGLA PARA CADA COLUMNA */
+.menu-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+}
+
+/* REGLA para el ITEM SOBRANTE (1 categoría centrada) */
+.menu-single-centered {
+    margin: 30px auto 0 auto; 
+    max-width: 590px; 
+    width: 100%; 
+}
+
+/* --- ESTILOS COMUNES DE CATEGORÍA Y ACORDEÓN --- */
+
+.category-wrapper {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: box-shadow 0.3s;
+}
+
+.category-wrapper:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.category-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 20px;
+    cursor: pointer;
+    background-color: #f7f7f7; 
+    color: #333;
+    font-weight: 700;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.category-title:hover {
+    background-color: #ffe0b2; 
+    color: #333;
+}
+
+/* Estilos de la lista de ítems dentro de la categoría (Acordeón Cerrado) */
+.menu-category-list {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.3s ease-out;
+    padding: 0 20px; 
+}
+
+/* Estilos de la lista de ítems dentro de la categoría (Acordeón Abierto) */
+.menu-category-list.active {
+    max-height: 2000px; /* Valor alto para desplegar */
+    padding: 10px 20px;
+    padding-top: 15px; 
+}
+
+/* Estilos de los ítems individuales */
+.menu-item-wrapper {
+    margin: 0;
+    padding: 10px 0;
+    border-bottom: 1px dashed #ccc;
+}
+
+.menu-item-wrapper:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.menu-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    gap: 10px;
+}
+
+.item-name {
+    font-size: 16px;
+    font-weight: 700;
+    color: #333;
+    flex-grow: 1;
+}
+
+.item-price-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-shrink: 0;
+}
+
+.item-price {
+    font-size: 16px;
+    font-weight: 900;
+    color: #D81B60; 
+}
+
+/* Botón de toggle (acordeón interno) */
+.toggle-btn {
+    width: 25px;
+    height: 25px;
+    background-color: #D81B60;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 18px;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s;
+}
+/* Cambia el ícono cuando está activo (abierto) */
+.toggle-btn.active {
+    transform: rotate(45deg); /* Gira el "+" para que parezca una "x" o simplemente cambia el estado visual */
+}
+
+.toggle-btn:hover {
+    background-color: #a01047;
+}
+
+/* Estilos de la descripción y botón (Acordeón Interno Cerrado) */
+.menu-item-description {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+    padding: 0 10px;
+}
+
+/* Estilos de la descripción y botón (Acordeón Interno Abierto) */
+.menu-item-description.active {
+    max-height: 500px; 
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.menu-item-description p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.add-to-cart-accordion {
+    padding: 8px 15px;
+    background-color: #D81B60;
+    color: white;
+    border: 1px solid #D81B60;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+    display: block; 
+    width: 100%;
+}
+
+.add-to-cart-accordion:hover {
+    background-color: white;
+    color: #D81B60;
+}
+
+/* ------------------------------------------- */
+/* --- ESTILOS DE CARRITO Y MODALES (Restaurados) --- */
+/* ------------------------------------------- */
+
+/* Botón fijo del carrito */
+.fixed-cart-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4CAF50; /* Verde para el carrito */
+    color: white;
+    padding: 15px 20px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000; 
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.fixed-cart-button:hover {
+    background-color: #3e8e41;
+}
+
+.fixed-cart-button.pulse {
+    animation: pulse-animation 0.5s ease-in-out;
+}
+
+@keyframes pulse-animation {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Modales */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed; 
+    z-index: 2000; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto; /* 10% desde arriba y centrado */
+    padding: 30px;
+    border: 1px solid #888;
+    width: 90%; 
+    max-width: 500px;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.modal-content h3 {
+    color: #D81B60;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.modal-content button, 
+.modal-content input, 
+.modal-content select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.modal-content button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    border: none;
+    font-weight: 700;
+}
+
+.modal-content button:hover {
+    opacity: 0.9;
+}
+
+.close-button, .close-payment-modal {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.close-button:hover,
+.close-button:focus,
+.close-payment-modal:hover,
+.close-payment-modal:focus {
+    color: #D81B60;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-summary {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 2px solid #D81B60;
+}
+
+.payment-methods {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.payment-method-btn {
+    flex-grow: 1;
+    background-color: #D81B60;
+    color: white;
+}
+
+.payment-method-btn.selected {
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+}
+
+/* Ajustes para móviles */
+@media (max-width: 600px) {
+    .modal-content {
+        margin: 5% auto;
+        padding: 20px;
+    }
+}
+
+/* ------------------------------------------- */
+/* --- ESTILOS DE MARCA DE AGUA (Watermark) --- */
+/* ------------------------------------------- */
+
+.watermark {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 10px;
+    background-color: rgba(255, 255, 255, 0.5); /* Fondo semi-transparente */
+    backdrop-filter: blur(2px); /* Efecto blur para mejorar la visibilidad */
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 5000; /* Alto z-index para asegurar que está encima de todo */
+}
+
+.watermark p {
+    font-size: 0.7rem; 
+    color: #666; 
+    margin: 0;
+    line-height: 1;
+    font-weight: 500;
+}
+
+/* Espacio para el logo (placeholder) */
+.watermark--logo {
+    width: 15px; 
+    height: 15px;
+    background-color: #D81B60; /* Color de placeholder */
+    border-radius: 3px;
+    flex-shrink: 0; 
+}
